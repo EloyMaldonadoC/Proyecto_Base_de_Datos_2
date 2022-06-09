@@ -11,7 +11,7 @@
 	<groupId>com.proyectoDB</groupId>
 	<artifactId>Proyecto_Base_de_Datos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Proyecto_Base_de_Datos</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
