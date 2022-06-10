@@ -52,10 +52,11 @@ async function registrarUsuario(){
         alert('Las contraseñas son diferentes, intente otra vez');
         return;
     }
+    /*
     if(datos.gru_num != 99){
         alert('Escoje el Grupo')
         return;
-    }
+    }*/
     for(usuario of usuarios){
         if(usuario.usu_correo == datos.usu_correo){
             alert('Este correo ya esta vinculado con una cuenta');
