@@ -1,7 +1,6 @@
 package com.proyectoDB.Proyecto_Base_de_Datos.controllers;
 
 import com.proyectoDB.Proyecto_Base_de_Datos.dao.UsuarioDao;
-import com.proyectoDB.Proyecto_Base_de_Datos.models.Grupo;
 import com.proyectoDB.Proyecto_Base_de_Datos.models.Usuario;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
@@ -47,8 +46,8 @@ public class UsuarioController{
 
     //Api que recibe la cadena para la funcion de busqueda por nombre
     @RequestMapping(value = "api/usuario/buscar/{cade}", method = RequestMethod.GET)
-    public List<Usuario> buscarPorNombre(@PathVariable String result){
-        String cade = "%"+ result +"%";
+    public List<Usuario> buscarPorNombre(@PathVariable String cade){
+
         return usuarioDao.buscarPorNombre(cade);
     }
 }

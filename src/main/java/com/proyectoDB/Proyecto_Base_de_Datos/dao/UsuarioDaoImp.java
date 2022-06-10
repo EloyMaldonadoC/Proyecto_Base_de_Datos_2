@@ -74,7 +74,11 @@ public class UsuarioDaoImp implements UsuarioDao{
     //Busca los usuarios que coincidan sus nombres con la cadena de caracteres dada
     @Override
     public List<Usuario> buscarPorNombre(String cade) {
-        String query = "FROM Usuario WHERE usu_nombre LIKE :cade OR usu_apellido LIKE :cade";
-        return  entityManager.createQuery(query).setParameter("cade", cade).getResultList();
+        StoredProcedureQuery query = entityManager.
+                createNamedStoredProcedureQuery("buscarPorNombre").
+                setParameter("cade", cade);
+        query.execute();
+        List<Usuario>  lista = query.getResultList();
+        return lista;
     }
 }

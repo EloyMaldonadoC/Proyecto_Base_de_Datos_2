@@ -15,6 +15,14 @@ import javax.persistence.*;
                 name = "usu_num",
                 type = Integer.class,
                 mode = ParameterMode.IN))
+@NamedStoredProcedureQuery(name = "buscarPorNombre",
+        procedureName = "buscarPorNombre",
+        resultClasses = {Usuario.class},
+        parameters =
+        @StoredProcedureParameter(
+                name = "cade",
+                type = String.class,
+                mode = ParameterMode.IN))
 public class Usuario {
 
     @Id
