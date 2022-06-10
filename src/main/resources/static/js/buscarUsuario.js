@@ -7,5 +7,5 @@ async function buscarUsuario(){
     let cade = document.getElementById('buscar').value;
     localStorage.busqueda = cade;
     //redirecciona
-    window.location.href = 'Busqueda.html';
+    window.location.href = 'Busqueda.html'
 }
