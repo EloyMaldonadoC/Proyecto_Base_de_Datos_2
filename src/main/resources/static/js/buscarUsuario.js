@@ -8,5 +8,5 @@ async function buscarUsuario(){
     window.location.href = 'Busqueda.html'
     let cade = document.getElementById('buscar').value;
     localStorage.busqueda = cade;
-
+    alert(cade);
 }
